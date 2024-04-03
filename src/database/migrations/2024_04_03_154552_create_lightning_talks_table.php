@@ -11,12 +11,14 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('conferences', function (Blueprint $table) {
+        Schema::create('lightning_talks', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
             $table->softDeletes();
             $table->text('title')->nullable();
-            $table->timestamp('start_at')->nullable();
+            $table->text('explanation')->nullable();
+            $table->foreignId('conference_id');
+            $table->foreignId('user_id');
         });
     }
 
@@ -25,6 +27,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('conferences');
+        Schema::dropIfExists('lightning_talks');
     }
 };

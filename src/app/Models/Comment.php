@@ -6,12 +6,12 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-class Conference extends Model
+class Comment extends Model
 {
     use HasFactory;
     use SoftDeletes;
-    public function lightning_talks()
+    public function lightning_talk()
     {
-        return $this->hasMany(LightningTalk::class);
+        return $this->belongsTo(LightningTalk::class);
     }
 }
