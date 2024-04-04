@@ -13,6 +13,7 @@ class ConferenceController extends Controller
         $conferences = Conference::get();
         return $conferences;
     }
+
     #[OA\Get(
         path: '/conference/store',
         responses: [
@@ -24,10 +25,12 @@ class ConferenceController extends Controller
     {
         return $request . "store";
     }
+
     public function show(Conference $conference): string
     {
         return $conference . "show";
     }
+
     public function update(Request $request, Conference $conference): string
     {
         return $request . $conference . "update";

@@ -48,7 +48,7 @@ class User extends Authenticatable
         ];
     }
 
-    public function lightning_talks()
+    public function lightningTalks()
     {
         return $this->hasMany(LightningTalk::class);
     }

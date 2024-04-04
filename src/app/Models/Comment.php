@@ -10,7 +10,8 @@ class Comment extends Model
 {
     use HasFactory;
     use SoftDeletes;
-    public function lightning_talk()
+
+    public function lightningTalk()
     {
         return $this->belongsTo(LightningTalk::class);
     }

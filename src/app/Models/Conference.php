@@ -10,7 +10,8 @@ class Conference extends Model
 {
     use HasFactory;
     use SoftDeletes;
-    public function lightning_talks()
+
+    public function lightningTalks()
     {
         return $this->hasMany(LightningTalk::class);
     }

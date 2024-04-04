@@ -13,14 +13,17 @@ class CommentController extends Controller
         $comments = Lightningtalk::find($request->lightning_talk_id)->comments;
         return $comments;
     }
+
     public function store(Request $request): string
     {
         return $request . "store";
     }
+
     public function show(Comment $comment): string
     {
         return $comment . "show";
     }
+
     public function update(Request $request, Comment $comment): string
     {
         return $request . $comment . "update";

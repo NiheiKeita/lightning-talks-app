@@ -11,14 +11,17 @@ class UserController extends Controller
     {
         return "index";
     }
+
     public function store(Request $request): string
     {
         return $request . "store";
     }
+
     public function show(User $user): string
     {
         return $user . "show";
     }
+
     public function update(Request $request, User $user): string
     {
         return $request . $user . "update";
