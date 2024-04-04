@@ -11,7 +11,7 @@ class ConferenceTest extends TestCase
      */
     public function test_example(): void
     {
-        $response = $this->get('/conferences');
+        $response = $this->get('/');
 
         $response->assertStatus(200);
     }
