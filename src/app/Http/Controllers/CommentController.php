@@ -3,14 +3,15 @@
 namespace App\Http\Controllers;
 
 use App\Models\Comment;
-use App\Models\Lightningtalk;
+use App\Models\LightningTalk;
 use Illuminate\Http\Request;
 
 class CommentController extends Controller
 {
     public function index(Request $request): mixed
     {
-        $comments = Lightningtalk::find($request->lightning_talk_id)->comments;
+        $lightningTalk = LightningTalk::find($request->lightning_talk_id);
+        $comments = optional($lightningTalk)->comments;
         return $comments;
     }
 

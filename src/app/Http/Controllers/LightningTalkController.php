@@ -10,7 +10,8 @@ class LightningTalkController extends Controller
 {
     public function index(Request $request): mixed
     {
-        $lightningTalks = Conference::find($request->conference_id)->lightningTalks;
+        $conference = Conference::find($request->conference_id);
+        $lightningTalks = optional($conference)->lightningTalks;
         return $lightningTalks;
     }
 

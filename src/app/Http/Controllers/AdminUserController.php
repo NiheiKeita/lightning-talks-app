@@ -10,56 +10,24 @@ class AdminUserController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(): string
     {
-        //
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     */
-    public function create()
-    {
-        //
+        return "index";
     }
 
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(Request $request): string
     {
-        //
-    }
-
-    /**
-     * Display the specified resource.
-     */
-    public function show(AdminUser $adminUser)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(AdminUser $adminUser)
-    {
-        //
+        return $request . "index";
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, AdminUser $adminUser)
+    public function update(Request $request, AdminUser $adminUser): string
     {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(AdminUser $adminUser)
-    {
-        //
+        return $request . $adminUser . "index";
     }
 }
