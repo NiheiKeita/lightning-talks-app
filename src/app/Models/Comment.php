@@ -11,7 +11,7 @@ class Comment extends Model
 {
     use HasFactory;
     use SoftDeletes;
-    
+
     public function lightningTalk(): BelongsTo
     {
         return $this->belongsTo(LightningTalk::class);

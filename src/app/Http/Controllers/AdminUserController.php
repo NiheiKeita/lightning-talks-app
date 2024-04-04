@@ -20,7 +20,7 @@ class AdminUserController extends Controller
      */
     public function store(Request $request): string
     {
-        return "index";
+        return $request . "index";
     }
 
     /**
@@ -28,7 +28,6 @@ class AdminUserController extends Controller
      */
     public function update(Request $request, AdminUser $adminUser): string
     {
-        return "index";
+        return $request . $adminUser . "index";
     }
-
 }
